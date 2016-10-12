@@ -10,11 +10,7 @@ service 'apache2' do
 	action [:enable, :start]
 end
 
-file '/var/www/html/index.html' do
-	content '<html>
-	<body>
-		<h1> Bismillah </h1>
-	</body>
-</html>'
+template '/var/www/html/index.html' do
+	source 'index.html.erb'
 end
 
