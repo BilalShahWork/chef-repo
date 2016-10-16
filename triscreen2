@@ -1,0 +1,6 @@
+xterm -title "running containers/volumes" -geometry 170x15+0+800 -bc -fg green -bg black -cr yellow -e watch -d -n 5 "docker ps -a; echo '----------'; docker volume ls; echo '----------'; docker images --digests "&
+xterm -title "docker status" -geometry 90x15+1050+800 -bc -fg green -bg black -cr yellow -e "watch -d -n 5 systemctl status docker "&
+xterm -title "DOCKER LOGS" -geometry 100x40+0+0 -bc -fg green -bg black -cr yellow -e "sudo journalctl -f -u docker" &
+xterm -title "TERMINAL 1" -geometry 132x50+850+0 -bc -fg green -bg black -cr yellow &
+xterm -title "ROOT TERMINAL" -geometry 132x50+700+100 -bc -fg cyan -bg black -cr yellow -e "su - "&
+atom&
